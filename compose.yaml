@@ -1,0 +1,11 @@
+services:
+  mcp-client:
+    image: crpi-yvha9coypdedaafa.cn-beijing.personal.cr.aliyuncs.com/lys1313013/mcp-client-demo:latest
+    ports:
+      - "127.0.0.1:3333:3333"
+    volumes:
+      - mcp-client-data:/app/.data
+    restart: unless-stopped
+    init: true
+volumes:
+  mcp-client-data:
